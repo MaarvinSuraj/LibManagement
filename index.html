@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Library Management System</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <a class="navbar-brand" href="#">LIBRARY</a>
+
+                <form id="searchForm">
+                    <input class="form-control" id="searchTxt" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="message"></div>
+
+
+    <div class="container">
+        <h1 class="Heading">Library Management System</h1>
+        <hr>
+        <form id="libraryForm">
+            <div class="form-group row">
+                <label for="bookName">Name</label>
+                <div class="ipfield">
+                    <input type="text" class="form-control" id="bookName" placeholder="Book Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Author">Author</label>
+                <div class="ipfield">
+                    <input type="text" class="form-control" id="author" placeholder="Author">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="TypeH">Type</legend>
+                    <div class="ipfield">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="fiction" value="fiction"
+                                checked>
+                            <label class="form-check-label" for="fiction">
+                                Fiction
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="programming"
+                                value="programming">
+                            <label class="form-check-label" for="programming">
+                                Computer Programming
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="cooking" value="cooking">
+                            <label class="form-check-label" for="cooking">
+                                Cooking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="novel" value="novel">
+                            <label class="form-check-label" for="novel">
+                                Novel
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="poetry" value="poetry">
+                            <label class="form-check-label" for="poetry">
+                                Poetry
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="history" value="history">
+                            <label class="form-check-label" for="history">
+                                History
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+
+        </form>
+
+        <div id="table">
+            <h1>Your books</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Type</th>
+                    </tr>
+                </thead>
+                <tbody id='tableBody'></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
